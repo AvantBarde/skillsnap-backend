@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "company": "TechCorp",
+    "description": "React, JavaScript, HTML, CSS",
+    "location": "Remote"
+  },
+  {
+    "id": 2,
+    "title": "Backend Engineer",
+    "company": "DevOps Inc",
+    "description": "Node.js, Express, MongoDB",
+    "location": "San Francisco"
+  },
+  {
+    "id": 3,
+    "title": "Full Stack Developer",
+    "company": "Buildify",
+    "description": "React, Node.js, MongoDB, Tailwind CSS",
+    "location": "Remote"
+  }
+]
