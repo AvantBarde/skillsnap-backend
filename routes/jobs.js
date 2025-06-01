@@ -4,6 +4,7 @@ const fs = require('fs');
 const router = express.Router();
 
 router.post('/match', (req, res) => {
+  console.log("🔥 RAW req.body received:", req.body);
   try {
     console.log("✅ Request body received:", req.body);
 

@@ -5,7 +5,6 @@ require('dotenv').config();
 
 const app = express();
 
-const jobRoutes = require('./routes/jobs')
 
 //Prevents CORS errors when frontend is hosted elsewhere
 app.use(cors());
@@ -13,6 +12,7 @@ app.use(cors());
 //Enables JSON parsing for POST requests
 app.use(express.json());
 
+const jobRoutes = require('./routes/jobs')
 //Gives you a test route at / to verify the server is up
 app.get('/', (req, res) => res.send('SkillSnap API is live'));
 
