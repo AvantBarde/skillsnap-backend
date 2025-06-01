@@ -1,6 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const jobs = require('../data/jobs.json');
+const path = require('path');
+const fs = require('fs');
+
+const jobsPath = path.join(__dirname, '../data/jobs.json');
+const jobs = JSON.parse(fs.readFileSync(jobsPath, 'utf8'));
+
 
 router.post('/match', (req, res) => {
   try {
