@@ -1,11 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
+const https = require('https');
 // const externalJobs = require('../data/externalJobs.json');
 
 // router.get('/external', (req, res) => {
 //   res.json(externalJobs)
 // })
+
+const agent = new https.Agent({ rejectUnauthorized: false });
 
 router.post('/match', async (req, res) => {
   console.log("RAW req.body received:", req.body);
@@ -19,7 +22,9 @@ router.post('/match', async (req, res) => {
 
   try {
     console.log("Fetching jobs from Remotive API...");
-    const response = await axios.get('https://remotive.io/api/remote-jobs?category=software-dev');
+    const response = await axios.get('https://remotive.io/api/remote-jobs?category=software-dev', { httpsAgent: agent }
+
+    );
 
     const allJobs = response.data.jobs;
     console.log(`Received ${allJobs.length} jobs from Remotive.`);
