@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ext-1",
+    "title": "Frontend Engineer",
+    "company": "Remote Rocket Inc.",
+    "description": "React, JavaScript, TailwindCSS. Building dashboards for SaaS clients.",
+    "location": "Remote",
+    "url": "https://remote-rocket.jobs/frontend-engineer"
+  },
+  {
+    "id": "ext-2",
+    "title": "Backend Developer",
+    "company": "API Syndicate",
+    "description": "Node.js, Express, MongoDB. API development for large data systems.",
+    "location": "New York, NY",
+    "url": "https://api-syndicate.jobs/backend-dev"
+  }
+]
