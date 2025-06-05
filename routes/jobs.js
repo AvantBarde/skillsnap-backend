@@ -3,8 +3,6 @@ const axios = require('axios');
 const router = express.Router();
 const https = require('https');
 
-
-
 router.post('/match', async (req, res) => {
   const { skills } = req.body;
   if (!skills || !Array.isArray(skills)) {
@@ -13,8 +11,6 @@ router.post('/match', async (req, res) => {
 
   try {
     console.log("Fetching jobs from Remotive API...");
-
-    // Use agent in the request
     const response = await axios.get(
       'https://remotive.io/api/remote-jobs?category=software-dev'
     );
@@ -32,4 +28,5 @@ router.post('/match', async (req, res) => {
   }
 });
 
+// ✅ EXPORT THE ROUTER
 module.exports = router;
