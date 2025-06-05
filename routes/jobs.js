@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const router = express.Router();
-const https = require('https'); // ✅ Add this
+const https = require('https');
 
 
 
@@ -14,7 +14,7 @@ router.post('/match', async (req, res) => {
   try {
     console.log("Fetching jobs from Remotive API...");
 
-    // ✅ Use agent in the request
+    // Use agent in the request
     const response = await axios.get(
       'https://remotive.io/api/remote-jobs?category=software-dev'
     );
@@ -31,3 +31,5 @@ router.post('/match', async (req, res) => {
     res.status(500).json({ error: 'Error retrieving jobs from external source.' });
   }
 });
+
+module.exports = router;
