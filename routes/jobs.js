@@ -3,8 +3,7 @@ const axios = require('axios');
 const router = express.Router();
 const https = require('https'); // ✅ Add this
 
-// 🔧 Create agent that skips SSL validation
-const agent = new https.Agent({ rejectUnauthorized: false });
+
 
 router.post('/match', async (req, res) => {
   const { skills } = req.body;
@@ -17,8 +16,7 @@ router.post('/match', async (req, res) => {
 
     // ✅ Use agent in the request
     const response = await axios.get(
-      'https://remotive.io/api/remote-jobs?category=software-dev',
-      { httpsAgent: agent }
+      'https://remotive.io/api/remote-jobs?category=software-dev'
     );
 
     const allJobs = response.data.jobs;
