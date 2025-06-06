@@ -24,8 +24,8 @@ router.post('/match', async (req, res) => {
         num_pages: '1',
       },
       headers: {
-        'X-RapidAPI-Key': '08a97a9b3dmsh3e72c766fc639e8p1338b6jsn565594af14f8',
-        'X-RapidAPI-Host': 'jsearch.p.rapidapi.com',
+        'x-rapidapi-key': '08a97a9b3dmsh3e72c766fc639e8p1338b6jsn565594af14f8',
+        'x-rapidapi-host': 'jsearch.p.rapidapi.com',
       }
     };
 
